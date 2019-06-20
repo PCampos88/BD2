@@ -1,3 +1,5 @@
+Banco de dados relacional para MySQL
+
 create table usuario_trab(
 sexo int,
 idade int,
@@ -7,15 +9,25 @@ uidioma int,
 pais int,
 local,
 );
+
 LOAD DATA INFILE 'C:/User/ian/Desktop/BancoDeDados.txt' INTO TABLE usuario_trab;
 
 SELECT pais, sexo, count(*) FROM pessoas GROUP BY pais, sexo;
+
 SELECT pais, sexo, idade, count(*) FROM pessoas GROUP BY pais, sexo, idade;
+
 SELECT pais, sexo, avg(salario) FROM pessoas GROUP BY pais, sexo;
+
 SELECT pais, sexo, avg(idade) FROM pessoas GROUP BY pais, sexo;
+
 SELECT pais, sexo, count(*) FROM pessoas WHERE país = 15 GROUP BY pais, sexo;
+
 SELECT pais, sexo, count(*) FROM pessoas WHERE pais = 15 AND sexo = 1 GROUP BY pais, sexo;
+
 SELECT pais, sexo, count(*) FROM pessoas WHERE pais >=0 AND pais <=15 GROUP BY pais, sexo;
+
 SELECT pais, idioma, count(*) FROM pessoas GROUP BY pais, idioma;
+
 SELECT pais, idioma, count(*) FROM pessoas GROUP BY pais, idioma WHERE idioma >= 0 AND idade <= 100;
+
 SELECT pais, escolaridade, count(*) FROM pessoas GROUP BY pais,idade escolaridade;
