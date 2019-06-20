@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <time.h>
 #include "pessoa.h"
-//#include <windows.h>
 
 void gerarBD(char *nome);
 void contPaisSexo(char nome[]);
@@ -22,33 +21,33 @@ void contPaisEscolaridade(char nome[]);
 int main(void){
 
 	srand(time(NULL));
-	//gerarBD("bd2.dat");
-	//gerarBD("bd1.dat");
-	//gerarBD("bd3.dat");
-	//gerarBD("bd4.dat");
+	gerarBD("bd2.dat");
+	gerarBD("bd1.dat");
+	gerarBD("bd3.dat");
+	gerarBD("bd4.dat");
 	
-	//contPaisSexo("bd2.dat");
-	//contPaisSexo("bd1.dat");
-	//contPaisSexo("bd3.dat");
-	// contPaisSexo("bd4.dat");
+	contPaisSexo("bd2.dat");
+	contPaisSexo("bd1.dat");
+	contPaisSexo("bd3.dat");
+	contPaisSexo("bd4.dat");
 	
-	//contPaisSexoIdade("bd1.dat");
+	contPaisSexoIdade("bd1.dat");
 	
-	//avgIdadePaisSexo("bd1.dat");
+	avgIdadePaisSexo("bd1.dat");
 	
-	//contPais15Sexo("bd1.dat");
+	contPais15Sexo("bd1.dat");
 	
-	//contPais15Sexo1("bd1.dat");
+	contPais15Sexo1("bd1.dat");
 	
-	//contPais015Sexo("bd1.dat");
+	contPais015Sexo("bd1.dat");
 	
-	//avgSalarioPaisSexo("bd1.dat");
+	avgSalarioPaisSexo("bd1.dat");
 
-	//contPaisIdioma("bd2.dat");
+	contPaisIdioma("bd2.dat");
 	
-	//contPaisIdioma0100("bd1.dat");
+	contPaisIdioma0100("bd1.dat");
 	
-	//contPaisEscolaridade("bd1.dat");
+	contPaisEscolaridade("bd1.dat");
 	
 }
 
@@ -68,7 +67,7 @@ void gerarBD(char *nome){
 	fclose(BD);
 }
 //=====================================================================================
-//SELECT país, sexo, count(*) FROM pessoas GROUP BY país, sexo;
+//SELECT paÃ­s, sexo, count(*) FROM pessoas GROUP BY paÃ­s, sexo;
 //===========================================================================================
 void contPaisSexo(char nome[]){
 	FILE *BD;
@@ -112,7 +111,7 @@ void contPaisSexo(char nome[]){
 	fclose(BD);
 }
 //===========================================================================================
-//SELECT país, sexo, idade, count(*) FROM pessoas GROUP BY país, sexo, idade;
+//SELECT paÃ­s, sexo, idade, count(*) FROM pessoas GROUP BY paÃ­s, sexo, idade;
 //============================================================================================
 void contPaisSexoIdade(char nome[]){
 	FILE *BD;
@@ -163,7 +162,7 @@ void contPaisSexoIdade(char nome[]){
 	fclose(BD);
 }
 //=================================================================================================
-// SELECT país, sexo, avg(idade) FROM pessoas GROUP BY país, sexo;
+// SELECT paÃ­s, sexo, avg(idade) FROM pessoas GROUP BY paÃ­s, sexo;
 //=================================================================================================
 void avgIdadePaisSexo(char nome[]){
 	FILE *BD;
@@ -213,7 +212,7 @@ void avgIdadePaisSexo(char nome[]){
 	fclose(BD);
 }
 //==============================================================================================
-//SELECT país, sexo, count(*) FROM pessoas WHERE país = 15 GROUP BY país, sexo;
+//SELECT paÃ­s, sexo, count(*) FROM pessoas WHERE paÃ­s = 15 GROUP BY paÃ­s, sexo;
 //==============================================================================================
 void contPais15Sexo(char nome[]){
 	FILE *BD;
@@ -258,7 +257,7 @@ void contPais15Sexo(char nome[]){
 	fclose(BD);
 }
 //==================================================================================
-//SELECT país, sexo, count(*) FROM pessoas WHERE país = 15 AND sexo = 1;
+//SELECT paÃ­s, sexo, count(*) FROM pessoas WHERE paÃ­s = 15 AND sexo = 1;
 //==================================================================================
 void contPais15Sexo1(char nome[]){
 	FILE *BD;
@@ -290,7 +289,7 @@ void contPais15Sexo1(char nome[]){
 	fclose(BD);
 }
 //============================================================================================
-//SELECT país, sexo, count(*) FROM pessoas WHERE país >=0 AND país <=15 GROUP BY país, sexo;
+//SELECT paÃ­s, sexo, count(*) FROM pessoas WHERE paÃ­s >=0 AND paÃ­s <=15 GROUP BY paÃ­s, sexo;
 //=============================================================================================
 void contPais015Sexo(char nome[]){
 	FILE *BD;
@@ -332,7 +331,7 @@ void contPais015Sexo(char nome[]){
 	fclose(BD);
 }
 //=============================================================================
-//SELECT país, sexo, avg(salario) FROM pessoas GROUP BY país, sexo;
+//SELECT paÃ­s, sexo, avg(salario) FROM pessoas GROUP BY paÃ­s, sexo;
 //=============================================================================
 
 void avgSalarioPaisSexo(char nome[]){
@@ -383,7 +382,7 @@ void avgSalarioPaisSexo(char nome[]){
 	fclose(BD);
 }
 //=====================================================================================
-//SELECT país, idoma, count(*) FROM pessoas GROUP BY país, idoma;
+//SELECT paÃ­s, idoma, count(*) FROM pessoas GROUP BY paÃ­s, idoma;
 //=====================================================================================
 void contPaisIdioma(char nome[]){
 	printf(" . ");
@@ -424,7 +423,7 @@ void contPaisIdioma(char nome[]){
 }
 
 //=======================================================================
-//SELECT país, idoma, count(*) FROM pessoas GROUP BY país, idoma WHERE idioma >= 0 AND idade <= 100;
+//SELECT paÃ­s, idoma, count(*) FROM pessoas GROUP BY paÃ­s, idoma WHERE idioma >= 0 AND idade <= 100;
 //=======================================================================
 
 void contPaisIdioma0100(char nome[]){
@@ -464,7 +463,7 @@ void contPaisIdioma0100(char nome[]){
 }
 
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++=
-//SELECT país, escolaridade, count(*) FROM pessoas GROUP BY país,idade escolaridade;
+//SELECT paÃ­s, escolaridade, count(*) FROM pessoas GROUP BY paÃ­s,idade escolaridade;
 //===========================================================================================
 
 void contPaisEscolaridade(char nome[]){
